@@ -45,6 +45,8 @@ void Oled_setup() {
  */
 void Display_Rrocess(char moji1[], char moji2[])
 {
+  Display_Clear();
+  
   for(int i = 0; i < 20; i++) {
     writeData(moji1[i]);
   }

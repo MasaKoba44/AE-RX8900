@@ -93,6 +93,7 @@ void Read_Date(char buff1[], char buff2[]) {
   WD = GET_WEEK(WEEK);
 
   sprintf(buff1, "%d%x/%x/%x       ", 20, YEAR, MONTH, DAY);
+
   sprintf(buff2, " (%4s) %02x:%02x    ", WEEK_D[WD], HOUR, MIN);
 }
 /*
@@ -110,6 +111,12 @@ void TX_DATE() {
 
   sprintf(buff2, "%02x:%02x:%02x  %d         ", HOUR, MIN, SEC,OLD_SEC1);
   Serial.print(buff2);
+
+  //TEMP_RESULT = ((float)TEMP * 2 - 187.19) / 3.218;
+  //Serial.print(TEMP_RESULT);
+  // Serial.print("℃     ");
+
+
 }
 /*
  * 週データを取得する。
